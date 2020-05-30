@@ -5,7 +5,7 @@
 # check_env: Check the environment if everything is okay to begin the install
 ################################################################################
 function check_env() {
-  printf "  Root Privileges...	          "
+  printf "Checking for root privileges...\n"
   if [ $(id -u) -ne 0 ]; then
     printf "[NO ROOT]\n"
   	echo "You need root privileges to install zmbackup"
@@ -13,7 +13,7 @@ function check_env() {
   else
     printf "[ROOT]\n"
   fi
-  printf "  Old Zmbackup Install...	  "
+  printf "Old Zmbackup Install..."
   su -s /bin/bash -c "whereis zmbackup" $OSE_USER > /dev/null 2>&1
   if [ $? != 0 ]; then
     printf "[NEW INSTALL]\n"
@@ -34,7 +34,7 @@ function check_env() {
       exit 0
     fi
   fi
-  printf "  Checking OS...	          "
+  printf "Checking OS..."
   which apt > /dev/null 2>&1
   if [ $? = 0 ]; then
     printf "[UBUNTU SERVER]\n"

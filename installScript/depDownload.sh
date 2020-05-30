@@ -11,10 +11,10 @@ function install_ubuntu() {
   if [[ $? -eq 0 ]]; then
     echo "Dependencies installed with success!"
   else
-    echo "Dependencies wasn't installed in your server"
-    echo "Please check if you have connection with the internet and apt-get is"
-    echo "working and try again."
-    echo "Or you can try manual execute the command:"
+    echo "Dependencies weren't installed in your server"
+    echo "Please check if you have internet connection and apt-get is"
+    echo "working properly and try again."
+    echo "Or you can try manually executing the command:"
     echo "apt-get update && apt-get install -y parallel wget httpie"
     exit $ERR_DEPNOTFOUND
   fi
@@ -56,7 +56,7 @@ function install_redhat() {
     echo "Dependencies wasn't installed in your server"
     echo "Please check if you have connection with the internet and yum is"
     echo "working and try again."
-    echo "Or you can try manual execute the command:"
+    echo "Or you can try manually executing the command:"
     echo "yum install -y epel-release && yum install -y parallel wget httpie"
     exit $ERR_DEPNOTFOUND
   fi
@@ -71,10 +71,10 @@ function remove_ubuntu() {
   if [[ $? -eq 0 ]]; then
     echo "Dependencies removed with success!"
   else
-    echo "Dependencies wasn't removed in your server"
+    echo "Dependencies weren't removed in your server"
     echo "Please check if you have connection with the internet and apt-get is"
     echo "working and try again."
-    echo "Or you can try manual execute the command:"
+    echo "Or you can try manually executing the command:"
     echo "apt-get remove -y parallel wget httpie"
   fi
 }
@@ -92,10 +92,10 @@ function remove_redhat() {
   if [[ $? -eq 0 ]]; then
     echo "Dependencies removed with success!"
   else
-    echo "Dependencies wasn't removed in your server"
+    echo "Dependencies weren't removed in your server"
     echo "Please check if you have connection with the internet and yum is"
     echo "working and try again."
-    echo "Or you can try manual execute the command:"
+    echo "Or you can try manually executing the command:"
     echo "yum install -y epel-release && yum install -y parallel wget httpie"
   fi
 }

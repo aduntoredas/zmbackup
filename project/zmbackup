@@ -1,7 +1,7 @@
 #!/bin/bash
 ################################################################################
 # zmbackup - Bash script to hot backup and hot restore Zimbra Collaboration
-#            Suite Opensource
+#            Suite Opensource (Zimbra OSE)
 #
 # Copyright (C) 2017 Lucas Costa Beyeler <lucas.costab@outlook.com>
 #
