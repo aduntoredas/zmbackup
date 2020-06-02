@@ -1,10 +1,10 @@
 #!/bin/bash
 ################################################################################
-# Command Help Option
+# Command Help Options
 ################################################################################
 
 ################################################################################
-# show_help: It will show a quick help about each command from zmbackup
+# show_help: It will show a quick help about each zmbackup command
 ################################################################################
 function show_help (){
   printf "usage: zmbackup -f [-m,-dl,-al,-ldp] [-d,-a] <mail/domain>"
@@ -32,7 +32,7 @@ function show_help (){
   printf "\n\nFull Backup Options:\n"
 
   printf "\n -m,   --mail                     : Execute a backup of an account, but only the mailbox."
-  printf "\n -dl,  --distributionlist         : Execute a backup of a distributionlist instead of an account."
+  printf "\n -dl,  --distributionlist         : Execute a backup of a distribution list instead of an account."
   printf "\n -al,  --alias                    : Execute a backup of an alias instead of an account."
   printf "\n -ldp, --ldap                     : Execute a backup of an account, but only the ldap entry."
   printf "\n -sig, --signature                : Execute a backup of a signature."
@@ -44,7 +44,7 @@ function show_help (){
   printf "\n\nRestore Backup Options:\n"
 
   printf "\n -m,   --mail                     : Execute a restore of an account,  but only the mailbox."
-  printf "\n -dl,  --distributionlist         : Execute a restore of a distributionlist instead of an account."
+  printf "\n -dl,  --distributionlist         : Execute a restore of a distribution list instead of an account."
   printf "\n -al,  --alias                    : Execute a restore of an alias instead of an account."
   printf "\n -ldp, --ldap                     : Execute a restore of an account, but only the ldap entry."
   printf "\n -ro,  --restoreOnAccount         : Execute a restore of an account inside another account."
